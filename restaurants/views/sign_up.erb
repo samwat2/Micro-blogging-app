@@ -1,1 +1,26 @@
-sign_up.erb
+<div class="row">
+  <div class="col-6 offset-3">
+    <form method="POST" action="/new_user">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" name="user[email]" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" name="user[password]" class="form-control" id="password" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label for="first_name">First Name</label>
+        <input type="text" name="user[first_name]" class="form-control" id="first_name">
+      </div>
+      <div class="form-group">
+        <label for="last_name">Last Name</label>
+        <input type="text" name="user[last_name]" class="form-control" id="last_name">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <div>
+        <a href="/sign_in">Sign In</a>
+      </div>
+    </form>
+  </div>
+</div>
