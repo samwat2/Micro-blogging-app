@@ -1,0 +1,33 @@
+html, body {
+	height: 100%;
+}
+
+.signinbackground {
+	background-image: url(/images/brightparis.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.signupbackground {
+	background-image: url(/images/paris.jpg);
+}
+
+.centersignin {
+	position: relative;
+	top: 30%;
+}
+
+.centersignup {
+	position: relative;
+	top: 15%;
+}
+
+.formbackground {
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 25px;
+	border-radius: 7px;
+}
+
+form label {
+	color: white;
+}
