@@ -21,10 +21,12 @@ get '/restaurants' do
 end
 
 get '/sign_in' do
+	@body_class = 'signinbackground'
 	erb :sign_in
 end
 
 get '/sign_up' do
+	@body_class = 'signupbackground'
 	erb :sign_up
 end
 
