@@ -31,10 +31,10 @@ get '/restaurants' do
 	erb :restaurants
 end
 
-# get '/sign_in' do
-# 	@body_class = 'signinbackground'
-# 	erb :sign_in
-# end
+get '/sign_in' do
+	@body_class = 'signinbackground'
+	erb :sign_in
+end
 
 get '/sign_up' do
 	@body_class = 'signupbackground'
@@ -53,7 +53,7 @@ post '/sign_in' do
 		session[:user_id] = @user.id #signs in the user.
 		redirect "/profile/#{@user.id}"
 	else
-		redirect "/sign-in"
+		redirect "/sign_in"
 	end
 end
 
