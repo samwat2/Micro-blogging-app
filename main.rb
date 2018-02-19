@@ -2,7 +2,6 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require './models'
 
-set :database, 'sqlite3:blog.sqlite3'
 set :database, "sqlite3:store.sqlite3"
 
 def current_user
@@ -51,7 +50,7 @@ post '/sign_in' do
 	@user = User.where(email: email).first
 	if @user && @user.password == password
 		session[:user_id] = @user.id #signs in the user.
-		redirect "/profile/#{@user.id}"
+		redirect "/user_profile/#{@user.id}"
 	else
 		redirect "/sign_in"
 	end
@@ -73,10 +72,10 @@ post '/update' do
 		end
 	end
 	current_user.update_attributes(updates)
-	redirect "/profile/#{@user.id}"
+	redirect "/user_profile/#{@user.id}"
 end
 
-get '/profile/:id' do
+get '/user_profile/:id' do
 	@user = User.find(params[:id])
-	erb :profile
+	erb :user_profile
 end
