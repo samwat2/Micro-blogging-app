@@ -1,5 +1,8 @@
 html, body {
 	height: 100%;
+	background: #ADA996;
+  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
 }
 
 .signinbackground {
@@ -30,4 +33,41 @@ html, body {
 
 form label {
 	color: white;
+}
+/*home-page*/
+.jumbotron {
+/*	display: inline-block;*/
+	background-color: inherit;
+}
+.images{
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	left: 16%;
+	top: 94%;
+}
+.img1 {
+	width: 400px;
+  height: auto;
+  margin: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+footer{
+	position: absolute;
+  top: 215%;
+  left: 40%;
+  display: inline-block;
+}
+/*end homepage*/
+
+.aboutbackground {
+	background-image: url(/images/chefs_table.jpg);
+}
+
+.carousel {
+	width: 900px;
+	height: auto;
 }

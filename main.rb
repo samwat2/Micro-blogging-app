@@ -9,6 +9,7 @@ get '/' do
 end
 
 get '/about' do
+	@body_class = 'aboutbackground'
 	erb :about
 end 
 
