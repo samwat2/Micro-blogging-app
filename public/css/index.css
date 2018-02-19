@@ -1,8 +1,19 @@
 html, body {
-	height: 100%;
-	background: #ADA996;
+/*	min-height: 100%;
+	min-width: 100%;*/
+/*	background: #ADA996;
   background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);*/
+  background: #5f2c82;
+  background: -webkit-linear-gradient(to top, #49a09d, #5f2c82);
+  background: linear-gradient(to top, #49a09d, #5f2c82);
+  background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: white;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .signinbackground {
@@ -45,41 +56,49 @@ form label {
 
 .restaurantdrop {
 	margin-top: 50px;
-
+}
 /*home-page*/
 .jumbotron {
-/*	display: inline-block;*/
 	background-color: inherit;
-}
-.images{
-	position: absolute;
-	padding: 0px;
-	margin: 0px;
-	border: 0px;
-	left: 16%;
-	top: 94%;
-}
-.img1 {
-	width: 400px;
-  height: auto;
-  margin: 2px;
-  position: relative;
-  display: inline-block;
+	text-align: center;
+	/*color: white;*/
 }
 
-footer{
+.img1 {
+	width: 100%;
+  height: auto;
+  margin: 2px;
+}
+.img2 {
+	width: 100%;
+  height: 100%;
+  margin: 2px;
+}
+
+/*footer{
 	position: absolute;
   top: 215%;
   left: 40%;
   display: inline-block;
+}*/
+
+.description{
+	font-weight: 500;
+	text-align: center;
 }
 /*end homepage*/
 
-.aboutbackground {
-	background-image: url(/images/chefs_table.jpg);
-}
+/*.aboutbackground {
+	background-image: url(/images/chefs_table_one.jpeg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}*/
 
-.carousel {
-	width: 900px;
-	height: auto;
+.aboutcarousel {
+	width: auto;
+	height: 500px;
+}
+.aboutcarousel img {
+	width: auto;
+	height: 700px;
 }
