@@ -91,3 +91,9 @@ post '/new_user' do
 	session[:user_id] = @user.id #signs in the user.
 	redirect "/user_profile/#{@user.id}"
 end
+
+get '/destroy/:id' do
+	@user = User.find(params[:id])
+	@user.destroy
+	redirect '/'
+end
