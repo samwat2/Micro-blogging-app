@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require './models'
 
+enable :sessions
 set :database, "sqlite3:store.sqlite3"
 
 def current_user
@@ -61,7 +62,12 @@ get '/sign-out' do
 	redirect '/'
 end
 
-post '/update' do
+get '/update_profile' do
+	@user = current_user
+	erb :update_profile
+end
+
+post '/update_profile' do
 	@user = current_user
 	updates = {}
 	params[:user].each do |col,val|

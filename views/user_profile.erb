@@ -7,9 +7,12 @@
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="/images/profile_picture_two.jpg" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title"> <%= @first_name %> <%= @last_name %> </h5>
-    <p class="card-text"> <%= @email %> </p>
+    <h5 class="card-title"> <%= @user.first_name %> <%= @user.last_name %> </h5>
+    <p class="card-text"> <%= @user.email %> </p>
     <p class="card-text"> WELCOME! </p>
-    <a href="#" class="btn btn-primary"><button type="button" class="btn btn-outline-primary">Update Profile</button></a>
+    <a href="/update_profile" class="btn btn-primary">Update Profile</a>
+    <a href="/destroy" class="btn btn-secondary">Delete Profile</a>
   </div>
 </div>
+
+<div class="favorites"></div>
