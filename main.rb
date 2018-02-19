@@ -72,7 +72,7 @@ post '/update' do
 		end
 	end
 	current_user.update_attributes(updates)
-	redirect "/profile/#{@user.id}"
+	redirect "/user_profile/#{@user.id}"
 end
 
 get '/user_profile/:id' do
