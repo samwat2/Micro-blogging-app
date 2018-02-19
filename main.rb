@@ -40,9 +40,9 @@ get '/sign_up' do
 	erb :sign_up
 end
 
-get '/user_profile' do
-	erb :user_profile
-end
+# get '/user_profile' do
+# 	erb :user_profile
+# end
 
 post '/sign_in' do
 	email = params[:user][:email]
@@ -78,4 +78,10 @@ end
 get '/user_profile/:id' do
 	@user = User.find(params[:id])
 	erb :user_profile
+end
+
+post '/new_user' do
+	@user = User.create(params[:user])
+	session[:user_id] = @user.id #signs in the user.
+	redirect "/user_profile/#{@user.id}"
 end
