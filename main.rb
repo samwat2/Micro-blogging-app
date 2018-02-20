@@ -89,7 +89,7 @@ post '/update_profile' do
 	redirect "/user_profile/#{@user.id}"
 end
 
-get '/user_profile/:id' do
+get "/user_profile/:id" do
 	@body_class = 'normalbackground'
 	@user = User.find(params[:id])
 	erb :user_profile
