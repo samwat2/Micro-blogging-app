@@ -107,7 +107,14 @@ get '/destroy/:id' do
 	redirect '/'
 end
 
-get '/all-users' do
+get '/all_users' do
+	@body_class = 'normalbackground'
 	@users = User.all
 	erb :all_users
+end
+
+get '/view_user/:id' do
+	@body_class = 'normalbackground'
+	@user = User.find(params[:id])
+	erb :view_user
 end

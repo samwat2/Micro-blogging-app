@@ -3,6 +3,9 @@ class User < ActiveRecord::Base
 	has_many :ratings
 	has_many :user_restaurants
 	has_many :restaurant, through: :user_restaurants
+	def full_name
+		first_name + ' ' + last_name
+	end
 end
 
 class Restaurant < ActiveRecord::Base

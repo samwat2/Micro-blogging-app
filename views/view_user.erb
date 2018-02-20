@@ -1,8 +1,7 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4 fullname">HELLO, <%= @user.first_name %></h1>
-    <p class="lead">Let's get started</p>
-    <a href="/all_users">Find Other Users!</a>
+    <h1 class="display-4 fullname"><%= @user.first_name %> <%= @user.last_name %></h1>
+    <p class="lead">Welcome to my profile!</p>
   </div>
 </div>
 <div class="card" style="width: 18rem;">
@@ -10,9 +9,7 @@
   <div class="card-body">
     <h5 class="card-title"> <%= @user.first_name %> <%= @user.last_name %> </h5>
     <p class="card-text"> <%= @user.email %> </p>
-    <p class="card-text"> WELCOME! </p>
-    <a href="/update_profile" class="btn btn-primary">Update Profile</a>
-    <a href="/destroy/<%= @user.id %>" class="btn btn-secondary">Delete Profile</a>
   </div>
 </div>
-<div class="posts"></div>
+<a href="/all_users">Find Other Users!</a>
+<div class="favorites"></div>
