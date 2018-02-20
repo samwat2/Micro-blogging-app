@@ -29,10 +29,13 @@
               User Interactions
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/sign_in">Sign in</a>
-              <a class="dropdown-item" href="/sign_up">Sign up</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/user_profile/#{@user.id}">Profile Page</a>
+              <% if user_signed_in? %>
+                <a class="dropdown-item" href="/user_profile/<%= current_user.id %>">Profile Page</a>
+              <% else %>
+                <a class="dropdown-item" href="/sign_in">Sign in</a>
+                <a class="dropdown-item" href="/sign_up">Sign up</a>
+              <% end %>
             </div>
           </li>
           <li class="nav-item">
