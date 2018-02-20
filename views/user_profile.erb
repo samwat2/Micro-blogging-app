@@ -2,17 +2,27 @@
   <div class="container">
     <h1 class="display-4 fullname">HELLO, <%= @user.first_name %></h1>
     <p class="lead">Let's get started</p>
-    <a href="/all_users">Find Other Users!</a>
+    <h2><a href="/all_users">Find Other Users!</a></h2>
   </div>
 </div>
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="/images/profile_picture_two.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title"> <%= @user.first_name %> <%= @user.last_name %> </h5>
-    <p class="card-text"> <%= @user.email %> </p>
-    <p class="card-text"> WELCOME! </p>
-    <a href="/update_profile" class="btn btn-primary">Update Profile</a>
-    <a href="/destroy/<%= @user.id %>" class="btn btn-secondary">Delete Profile</a>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <img class="top" src="/images/profile_picture_two.jpg">
+    </div>
+    <div class="col-6 info">
+      <h3>INFO</h3>
+      <h4 class="card-title">Full Name: <%= @user.first_name %> <%= @user.last_name %> </h4>
+      <p class="card-text">Email Address: <%= @user.email %> </p>
+      <a href="/update_profile" class="btn btn-primary">Update Profile</a>
+      <a href="/destroy/<%= @user.id %>" class="btn btn-secondary">Delete Profile</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="posts">
+        <h2>POSTS</h2>
+      </div>
+    </div>
   </div>
 </div>
-<div class="posts"></div>
