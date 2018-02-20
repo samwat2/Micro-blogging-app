@@ -1,9 +1,9 @@
-<div class="all_users">
-	<%= @user.each do |user| %>
-	<div class="users">
-		<h1><%= @user.first_name %></h1>
-		<p><%= @user.last_name %></p>
-		<a href="/profile/<%= user.id %>">Profile</a>
-	</div>
-	<%= end %>
+<div class="users">
+	<% @users.each do |user| %>
+		<div class="user">
+			<h5><%= user.first_name %> <%= user.last_name %></h5>
+			<p><%= user.email %></p>
+			<a href="/view_user/<%= user.id %>">View User's Profile</a>
+		</div>
+	<% end %>
 </div>

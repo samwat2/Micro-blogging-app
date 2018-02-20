@@ -114,6 +114,33 @@ form label {
 	min-height: 195px;
 }
 
+.user{
+	border: 4px solid black;
+	text-align: center;
+	height: auto;
+	width: auto;
+	margin: 10px;
+	/*color: black;*/
+	text-transform: uppercase;
+	transition: 2s ease;
+}
+
+.user:hover {
+	background: #CC95C0;
+	background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
+	background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
+}
+
+.fullname {
+	text-transform: uppercase;	
+}
+
+
+.posts {
+	height: 400px;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
 .commentCenter {
 	text-align: center;
 	color: black;
