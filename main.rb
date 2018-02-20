@@ -118,3 +118,8 @@ get '/view_user/:id' do
 	@user = User.find(params[:id])
 	erb :view_user
 end
+
+post '/new_post' do
+	current_user.posts.create(params[:post])
+	redirect "/restaurant_profile/#{params[:post][:restaurant_id]}"
+end
