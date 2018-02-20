@@ -4,30 +4,14 @@
   <hr class="my-4">
 </div>
 
-<div class="container restaurantdrop">
+<div class="container">
 	<div class="row">
-		<div class="col- restaurantgrid"><a href="/restaurant_profile"><img class="restaurantround" src="https://dummyimage.com/300x300/000/fff"></a></div>
-		<div class="col- restaurantgrid"><img class="restaurantround" src="https://dummyimage.com/300x300/000/fff"></div>
-		<div class="col- restaurantgrid"><img class="restaurantround" src="https://dummyimage.com/300x300/000/fff"></div>
-	</div>
-	<div class="row offset-sm-1">
-		<div class="col- restaurantgrid"><img class="restaurantround" src="https://dummyimage.com/300x300/000/fff"></div>
-		<div class="col- restaurantgrid"><img class="restaurantround" src="https://dummyimage.com/300x300/000/fff"></div>
-		<div class="col- restaurantgrid"><img class="restaurantround" src="https://dummyimage.com/300x300/000/fff"></div>
-	</div>
-	<div class="row">
-		<div class="col- restaurantgrid"><img class="restaurantround" src="https://dummyimage.com/300x300/000/fff"></div>
-		<div class="col- restaurantgrid"><img class="restaurantround" src="https://dummyimage.com/300x300/000/fff"></div>
-		<div class="col- restaurantgrid"><img class="restaurantround" src="https://dummyimage.com/300x300/000/fff"></div>
-	</div>
-	<div class="row offset-sm-1">
-		<div class="col- restaurantgrid"><img class="restaurantround" src="https://dummyimage.com/300x300/000/fff"></div>
-		<div class="col- restaurantgrid"><img class="restaurantround" src="https://dummyimage.com/300x300/000/fff"></div>
-		<div class="col- restaurantgrid"><img class="restaurantround" src="https://dummyimage.com/300x300/000/fff"></div>
-	</div>
-	<div class="row">
-		<div class="col- restaurantgrid"><img class="restaurantround" src="https://dummyimage.com/300x300/000/fff"></div>
-		<div class="col- restaurantgrid"><img class="restaurantround" src="https://dummyimage.com/300x300/000/fff"></div>
-		<div class="col- restaurantgrid"><img class="restaurantround" src="https://dummyimage.com/300x300/000/fff"></div>
+		<% @restaurants.each_with_index do |restaurant,i| %>
+			<div class="col-3 <%= 'offset-1' if i%3 == 0 && i%2 != 0 %> restaurantgrid">
+				<a href="/restaurant_profile/<%= restaurant.id %>">
+					<img class="restaurantround imageSize" src="/images/<%= restaurant.img_url %>">
+				</a>
+			</div>
+		<% end %>
 	</div>
 </div>

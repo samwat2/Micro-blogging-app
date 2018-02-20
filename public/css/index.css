@@ -47,7 +47,7 @@ form label {
 }
 
 .restaurantgrid {
-	margin: 10px;
+	margin-bottom: 10px;
 }
 
 .restaurantround {
@@ -106,4 +106,10 @@ form label {
 
 .card {
 	color: black;
+}
+
+.imageSize {
+	height: 100%;
+	width: 100%;
+	min-height: 195px;
 }
