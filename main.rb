@@ -23,11 +23,13 @@ get '/about' do
 	erb :about
 end 
 
-get '/restaurant_profile' do
+get '/restaurant_profile/:id' do
+	@restaurant = Restaurant.find(params[:id])
 	erb :restaurant_profile
 end
 
 get '/restaurants' do
+	@restaurants = Restaurant.all
 	erb :restaurants
 end
 

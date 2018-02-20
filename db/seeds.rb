@@ -1,1 +1,9 @@
-@herpes_
+@herpes_pizza = Restaurant.create(name: 'Herpes Pizza', img_url: 'herpes_pizza.jpeg', description: 'Keeping it real since 1945')
+@hilters_cross = Restaurant.create(name: 'Hitlers Cross', img_url: 'hitlers_cross.jpg', description: 'Appointed the Master Restaurant in 1933!')
+@moscow = Restaurant.create(name: 'Moscow', img_url: "moscow_chefs'.jpg", description: 'Flooding the market since 1944!')
+@thai_tanic = Restaurant.create(name: 'Thai Tanic', img_url: 'ti_tanic.jpg', description: 'Going down in history since 1912!')
+@vineyard = Restaurant.create(name: 'Vineyard', img_url: 'vineyard_chef.jpg', description: 'Healthy and Delicious')
+@vegan_restaurant = Restaurant.create(name: 'Vegan Restaurant', img_url: 'vegan_restaurant.jpg', description: 'Way too healthy')
+@sushi = Restaurant.create(name: 'Sushi Lovers', img_url: 'sushi_chef.jpg', description: 'Always hand crafted!')
+@splash_chef = Restaurant.create(name: 'Splash Chefs', img_url: 'splash_chef_table.jpg', description: 'Inovation that excites!')
+@ritz_paris = Restaurant.create(name: 'Ritz Paris', img_url: 'ritz_paris.jpg', description: 'The standard in excellence since forever!')
