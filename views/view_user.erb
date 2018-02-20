@@ -18,12 +18,14 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <div class="posts">
-        <h2>POSTS</h2>
+      <div class="row posts">
         <% @user.posts.each do |post| %>
-          <h4>Restaurant: <%= post.restaurant.name %></h4>
-          <h4>Date: <%= post.creation_date %></h4>
-          <h4>Subject: <%= post.content %></h4>
+          <div class="col-2 comments">
+            <h2>POSTS</h2>
+            <h4>Restaurant: <%= post.restaurant.name %></h4>
+            <h4>Date: <%= post.creation_date %></h4>
+            <h4>Subject: <%= post.content %></h4>
+          </div>
         <% end %>
       </div>
     </div>
