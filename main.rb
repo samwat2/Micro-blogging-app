@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require './models'
+require 'date'
 
 enable :sessions
 set :database, "sqlite3:store.sqlite3"
@@ -120,6 +121,7 @@ get '/view_user/:id' do
 end
 
 post '/new_post' do
+	params[:post][:creation_date] = Time.now
 	current_user.posts.create(params[:post])
 	redirect "/restaurant_profile/#{params[:post][:restaurant_id]}"
 end
