@@ -16,18 +16,22 @@ def user_signed_in?
 end
 
 get '/' do
+	@body_class = 'normalbackground'
   erb :home
 end
 
 get '/about' do
+	@body_class = 'normalbackground'
 	erb :about
 end 
 
 get '/restaurant_profile' do
+	@body_class = 'normalbackground'
 	erb :restaurant_profile
 end
 
 get '/restaurants' do
+	@body_class = 'normalbackground'
 	erb :restaurants
 end
 
@@ -58,6 +62,7 @@ post '/sign_in' do
 end
 
 get '/sign-out' do
+	@body_class = 'normalbackground'
 	session[:user_id] = nil
 	redirect '/'
 end
@@ -82,6 +87,7 @@ post '/update_profile' do
 end
 
 get '/user_profile/:id' do
+	@body_class = 'normalbackground'
 	@user = User.find(params[:id])
 	erb :user_profile
 end
@@ -96,4 +102,9 @@ get '/destroy/:id' do
 	@user = User.find(params[:id])
 	@user.destroy
 	redirect '/'
+end
+
+get '/all-users' do
+	@users = User.all
+	erb :all_users
 end
