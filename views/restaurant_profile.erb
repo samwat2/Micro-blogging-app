@@ -1,5 +1,50 @@
 <div class="jumbotron">
-  <h1 class="display-4"><%= restaurant.id %></h1>
+  <h1 class="display-4"><%= @restaurant.name %></h1>
   <hr class="my-4">
+  <p class="lead"><%= @restaurant.description %></p>
 </div>
-<div></div>
+<div class="container commentCenter">
+	<h1>Comments</h1>
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+	  Comment!
+	</button>
+</div>
+
+<div class="container commentLength">
+	<div></div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title commentCenter" id="exampleModalLabel">Comment</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="" class="formbackground">
+      		<div class="form-group">
+        		<label for="commentSubject">Subject</label>
+        		<input type="text" name="" class="form-control" id="subject" placeholder="Subject">
+      		</div>
+      		<div class="form-group">
+        		<label for="exampleInputPassword1">Good or Bad?</label>
+        		<input type="text" name="" class="form-control" id="rating" placeholder="Good or Bad">
+      		</div>
+      		<div class="form-group">
+        		<label for="comment">Comment</label>
+        		<textarea name="comment" id="" cols="30" rows="10" placeholder="Comment"></textarea>
+      		</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
