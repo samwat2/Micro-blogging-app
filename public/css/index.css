@@ -104,10 +104,6 @@ form label {
 	height: 700px;
 }
 
-.card {
-	color: black;
-}
-
 .imageSize {
 	height: 100%;
 	width: 100%;
@@ -137,8 +133,11 @@ form label {
 
 
 .posts {
-	height: 400px;
 	background-color: rgba(0, 0, 0, 0.3);
+	height: 300px;
+	width: auto;
+	margin: 5px;
+	text-align: center;
 }
 
 .commentCenter {
@@ -162,4 +161,13 @@ form label {
 	text-align: center;
 	margin: 10px;
 	border-radius: 7px;
+}
+
+.top {
+	width: 100%;
+	margin: 4px;
+}
+
+.info {
+	text-align: center;
 }

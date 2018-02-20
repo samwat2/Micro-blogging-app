@@ -2,14 +2,25 @@
   <div class="container">
     <h1 class="display-4 fullname"><%= @user.first_name %> <%= @user.last_name %></h1>
     <p class="lead">Welcome to my profile!</p>
+    <h2><a href="/all_users">Find Other Users!</a></h2>
   </div>
 </div>
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="/images/profile_picture_two.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title"> <%= @user.first_name %> <%= @user.last_name %> </h5>
-    <p class="card-text"> <%= @user.email %> </p>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <img class="top" src="/images/profile_picture_two.jpg">
+    </div>
+    <div class="col-6 info">
+      <h3>INFO</h3>
+      <h4 class="card-title">Full Name: <%= @user.first_name %> <%= @user.last_name %> </h4>
+      <p class="card-text">Email Address: <%= @user.email %> </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="posts">
+        <h2>POSTS</h2>
+      </div>
+    </div>
   </div>
 </div>
-<a href="/all_users">Find Other Users!</a>
-<div class="favorites"></div>
