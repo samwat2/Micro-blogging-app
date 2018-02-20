@@ -12,7 +12,15 @@
 </div>
 
 <div class="container commentLength">
-	<div></div>
+	<div class="row justify-content-center">
+		<% @restaurant.posts.each do |post| %>
+			<div class="col-2 comments">
+				<h5><%= post.user.first_name %></h5>
+				<h6><%= post.subject %></h6>
+				<h6><%= post.content %></h6>
+			</div>
+		<% end %>
+	</div>
 </div>
 
 <!-- Modal -->
@@ -26,24 +34,21 @@
         </button>
       </div>
       <div class="modal-body">
-        <form method="POST" action="" class="formbackground">
+        <form method="POST" action="/new_post" class="formbackground">
       		<div class="form-group">
         		<label for="commentSubject">Subject</label>
-        		<input type="text" name="" class="form-control" id="subject" placeholder="Subject">
-      		</div>
-      		<div class="form-group">
-        		<label for="exampleInputPassword1">Good or Bad?</label>
-        		<input type="text" name="" class="form-control" id="rating" placeholder="Good or Bad">
+        		<input type="text" name="post[subject]" class="form-control" id="subject" placeholder="Subject">
       		</div>
       		<div class="form-group">
         		<label for="comment">Comment</label>
-        		<textarea name="comment" id="" cols="30" rows="10" placeholder="Comment"></textarea>
+        		<textarea name="post[content]" id="" cols="30" rows="10" placeholder="Comment"></textarea>
       		</div>
+      		<input type="hidden" name="post[restaurant_id]" value="<%= @restaurant.id %>">
+        	<button type="submit" class="btn btn-primary">Submit</button>
+        	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
