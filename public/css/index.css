@@ -1,21 +1,19 @@
 html, body {
 	min-height: 100%;
 	min-width: 100%;
-/*	background: #ADA996;
-  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);*/
-  background: #5f2c82;
+	color: white;
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+.normalbackground{
+	background: #5f2c82;
   background: -webkit-linear-gradient(to top, #49a09d, #5f2c82);
   background: linear-gradient(to top, #49a09d, #5f2c82);
   background-repeat: no-repeat;
 	background-size: 100% 100%;
-	color: white;
-  margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: "Times New Roman", Times, serif;
 }
-
 .signinbackground {
 	background-image: url(/images/brightparis.jpg);
 	background-repeat: no-repeat;
