@@ -22,6 +22,11 @@
     <div class="col-12">
       <div class="posts">
         <h2>POSTS</h2>
+        <% @user.posts.each do |post| %>
+          <h4>Restaurant: <%= post.restaurant.name %></h4>
+          <h4>Date: <%= post.creation_date %></h4>
+          <h4>Subject: <%= post.content %></h4>
+        <% end %>
       </div>
     </div>
   </div>
