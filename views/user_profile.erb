@@ -11,8 +11,8 @@
     <p class="card-text"> <%= @user.email %> </p>
     <p class="card-text"> WELCOME! </p>
     <a href="/update_profile" class="btn btn-primary">Update Profile</a>
-    <a href="/destroy" class="btn btn-secondary">Delete Profile</a>
+    <a href="/destroy/<%= @user.id %>" class="btn btn-secondary">Delete Profile</a>
   </div>
 </div>
-
+<a href="/all_users">Find Other Users!</a>
 <div class="favorites"></div>
