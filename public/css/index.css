@@ -113,3 +113,19 @@ form label {
 	width: 100%;
 	min-height: 195px;
 }
+
+.commentCenter {
+	text-align: center;
+	color: black;
+}
+
+.modelColor {
+	color: black;
+}
+
+.commentLength {
+	height: 600px;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 7px;
+	margin-bottom: 20px;
+}
