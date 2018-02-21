@@ -41,7 +41,7 @@
       		</div>
       		<div class="form-group">
         		<label for="comment">Comment</label>
-        		<textarea name="post[content]" id="" cols="30" rows="10" placeholder="Comment"></textarea>
+        		<textarea maxlength="150" name="post[content]" id="" cols="30" rows="10" placeholder="Comment"></textarea>
       		</div>
       		<input type="hidden" name="post[restaurant_id]" value="<%= @restaurant.id %>">
         	<button type="submit" class="btn btn-primary">Submit</button>
