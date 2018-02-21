@@ -125,3 +125,9 @@ post '/new_post' do
 	current_user.posts.create(params[:post])
 	redirect "/restaurant_profile/#{params[:post][:restaurant_id]}"
 end
+
+get '/latest_posts' do
+	@body_class = 'normalbackground'
+	@posts = Post.last(10).reverse
+	erb :latest_posts
+end

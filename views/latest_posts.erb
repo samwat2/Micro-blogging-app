@@ -1,0 +1,15 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Latest Posts</h1>
+    <p class="lead"></p>
+  </div>
+</div>
+
+<% @posts.each do |post| %>
+	<div class="latest_post">
+			<h6 class="names_of_users">User's Name: <%= post.user.first_name %></h6>
+			<h6>Restaurant Name: <%= post.restaurant.name %></h6>
+			<h6>Subject: <%= post.content %></h6>
+			<h6>Date Posted: <%= post.creation_date %></h6>
+	</div>
+<% end %>

@@ -171,3 +171,17 @@ form label {
 .info {
 	text-align: center;
 }
+
+.latest_post {
+	border: 3px solid black;
+	text-align: center;
+	height: auto;
+	width: auto;
+	margin: 10px;
+} 
+
+.names_of_users {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-decoration: underline;	
+}
