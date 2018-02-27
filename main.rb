@@ -81,9 +81,7 @@ post '/update_profile' do
 	updates = {}
 	params[:user].each do |col,val|
 		if !val.blank?
-			updates[col.to_sym] = val
-		else
-			
+			updates[col.to_sym] = val\
 		end
 	end
 	current_user.update_attributes(updates)
